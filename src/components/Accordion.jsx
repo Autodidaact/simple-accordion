@@ -1,4 +1,4 @@
-import {useState} from "react"
+import { useState } from "react"
 import data from "./data";
 import "./styles.css"
 
@@ -9,6 +9,7 @@ export default function Accordion(){
     function handleSingleSelection(currentId){
         console.log(currentId )
         setSelected(currentId === selected ? null : currentId);
+    
     }
 
     return( 
@@ -28,7 +29,9 @@ export default function Accordion(){
                                 
                             </div>
                             {
+
                                 selected === item.id ? 
+                   
                                 <div className="content">
                                     {item.answer}
                                 </div>
